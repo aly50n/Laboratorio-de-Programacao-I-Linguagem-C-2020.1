@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+float desconto_inss(float salario_bruto)
+{
+    float descontoinss, salariodesc;
+    descontoinss = salario_bruto * 0.1;
+    salariodesc = salario_bruto - descontoinss;
+    return salariodesc;
+}
+
+float desconto_fgts(float salario_bruto)
+{
+    float descontofgts, salariodesc; 
+    descontofgts = salario_bruto * 0.08;
+    salariodesc = salario_bruto - descontofgts;
+    return salariodesc;
+}
+
+float desconto_planSaude(float salario_bruto)
+{
+    float desconto_plano;
+    desconto_plano = salario_bruto - 100.00;
+    return desconto_plano;
+}
+
+int main()
+{
+    float salario, salario_com_desconto;
+    printf("Digite o valor do seu salário bruto: ");
+    scanf("%f", &salario);
+    salario_com_desconto = desconto_fgts(salario);
+    salario_com_desconto = desconto_inss(salario_com_desconto);
+    salario_com_desconto = desconto_planSaude(salario_com_desconto);
+    printf("O salário com desconto é: %f/n", salario_com_desconto);
+    
+    return 0;
+}
