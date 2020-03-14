@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int numero1, numero2, op, soma,menos,dividir,multiplicar;
+    printf("Digite um número inteiro para realizar uma operação: ");
+    scanf("%d", &numero1);
+    printf("Digite outro número inteiro para realiazar uma operação: ");
+    scanf("%d", &numero2);
+    printf("Escolha a operação que deseja realizar com os valores digitados: \n 1- Adição. \n 2- Subtração. \n 3- Divisão. \n 4- Multiplicação. \n");
+    scanf("%d", &op);
+    switch(op){
+        case 1:
+            soma = numero1 + numero2;
+            printf("O resultado da adição é igual a: %d\n", soma);
+            break;
+        case 2:
+            menos = numero1 - numero2;
+            printf("O resultado da subtração é igual a: %d\n", menos);
+            break;
+        case 3:
+            dividir = numero1 / numero2;
+            printf("O resultado da divisão é igual a: %d\n", dividir);
+            break;
+        case 4:
+            multiplicar = numero1 * numero2;
+            printf("O resultado da multiplicação é igual a: %d\n", multiplicar);
+            break;
+    }
+    
+    return 0;
+}
