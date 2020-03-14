@@ -1,0 +1,26 @@
+#include <stdio>
+
+float calcula_media_ponderada(int peso_1, int peso_2, float nota_1, float nota_2)
+{
+    float media_ponderada;
+    media_ponderada = (peso_1 * nota_1 + peso_2 * nota_2) / (peso_1 + peso_2);
+    return media_ponderada;
+}
+
+int main(void)
+{
+    int matricula, peso1, peso2;
+    float media, nota1, nota2;
+    printf("Digite o peso da primeira prova do aluno: ");
+    scanf("%d", &peso1);
+    printf("Digite o peso da segunda prova do aluno: ");
+    scanf("%d", &peso2);
+    printf("Digite a primeira nota do aluno: ");
+    scanf("%f", &nota1);
+    printf("Digite a segunda nota do aluno: ");
+    scanf("%f", &nota2);
+    media = calcula_media_ponderada(peso1,peso2,nota1,nota2);
+    printf("a média ponderada do aluno é: %f", media);
+
+    return 0;
+}
