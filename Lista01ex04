@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+    float nota1, nota2, nota3, media;
+    printf("Digite a primeira nota do aluno: ");
+    scanf("%f", &nota1);
+    printf("Digite a segunda nota do aluno: ");
+    scanf("%f", &nota2);
+    media = (nota1+nota2) / 2;
+    
+    if ((media >= 5) && (nota1 >= 3) && (nota2 >= 3))
+    {
+        printf("O aluno passou direto, está aprovado!");
+    }
+    else
+    {
+        printf("O aluno teve que fazer uma terceira prova.\nDigite a nota da 3ª prova do aluno: ");
+        scanf("%f", &nota3);
+    }
+    
+    if ((media < 5) || (nota1 < 3) || (nota2 < 3))
+    {
+        if (nota1 >= nota2)
+        {
+            media = (nota1 + nota3) / 2;
+        }
+        else
+        {
+            media = (nota2 + nota3) / 2;
+        }
+        if (media >= 5)
+        {
+            printf("A média final do aluno foi %1.1f e ele está aprovado!", media);
+        }
+        else
+        {
+            printf("A média final do aluno foi %1.1f e ele está reprovado!", media);
+        }
+    }
+    
+    
+    
+    return 0;
+}
