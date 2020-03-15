@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define MULTA 2.50
+
+int main()
+{
+    int dia_retirada, dia_entrega, periodo, dia_a_mais;
+    float multaaplicada;
+    printf("Digite o dia da retirada do livro: ");
+    scanf("%d", &dia_retirada);
+    printf("Agora digite o dia da entrega do livro: ");
+    scanf("%d", &dia_entrega);
+    periodo = dia_entrega - dia_retirada;
+    if (periodo > 15)
+    {
+        dia_a_mais = periodo - 15;
+        multaaplicada = dia_a_mais * MULTA;
+        printf("Você ficou com o livro por mais de 15 dias, o valor da sua multa é: R$ %1.2f", multaaplicada);
+    }
+    else
+    {
+        printf("Obrigado!")
+    }
+    
+    return 0;
+}
