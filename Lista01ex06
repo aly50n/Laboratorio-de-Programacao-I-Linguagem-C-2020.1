@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+
+{
+    int num1, num2, cont;
+    printf("Jogador1 digite um número inteiro de 1 a 100:\n");
+    scanf("%d", &num1);
+    printf("Jogador2 você terá 5 chances para acertar a senha do jogador1\nDigite um número inteiro de 1 a 100:\n");
+    scanf("%d", &num2);
+    cont = 1;
+    if (num1 == num2)
+    {
+        printf("Parabéns você venceu Jogador2! O valor digitado é igual a senha!");
+    }
+    else
+    {
+        while (cont != 5)
+        {
+            if (num2 > num1)
+            {
+                printf("Seu número tem valor maior que a senha, tente novamente!\n");
+                scanf("%d", &num2);
+            }
+            else
+            {
+                printf("Seu número tem valor menor que a senha, tente novamente!\n");
+                scanf("%d", &num2);
+            }
+            cont++;
+            if (cont == 5 && num1 != num2)
+            {
+                printf("Suas chances acabaram Jogador2, você perdeu!\nO Jogador1 venceu!");
+            }
+            if (num1 == num2)
+            {
+                printf("Parabéns Jogador2 o valor digitado é igual a senha, você venceu!");
+                cont = 5;
+            }
+            
+        }
+    }
+    return 0;
+}
