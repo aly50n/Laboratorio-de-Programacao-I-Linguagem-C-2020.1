@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int valor,valor2,valor3;
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &valor);
+    printf("Digite mais um valor inteiro: ");
+    scanf("%d", &valor2);
+    printf("Digite um último valor inteiro: ");
+    scanf("%d", &valor3);
+    
+    if ((valor <= valor2) && (valor2 <= valor3))
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor, valor2, valor3);
+    }
+    else if ((valor <= valor3) && (valor3 <= valor2))
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor, valor3, valor2);
+    }
+    else if ((valor2 <= valor) && (valor <= valor3))
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor2, valor, valor3);
+    }
+   else if ((valor2 <= valor3) && (valor3 <= valor))
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor2, valor3, valor);
+    }
+    else if ((valor3 <= valor) && (valor <= valor2))
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor3, valor, valor2);
+    }
+    else
+    {
+        printf("Seus números em ordem crescente: %d %d %d", valor3, valor2, valor);
+    }
+    return 0;
+}
