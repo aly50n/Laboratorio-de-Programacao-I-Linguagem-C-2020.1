@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, numero_conta[10];
+    float saldo[10], saldo_medio=0;
+    for(i=0;i<10;i++)
+    {
+        printf("%dº Cliente por favor digite o número da sua conta: ", (i + 1));
+        scanf("%d", &numero_conta[i]);
+        printf("%dº Cliente por favor digite o seu saldo: ", (i + 1));
+        scanf("%f", &saldo[i]);
+        saldo_medio += saldo[i] / 10;
+    }
+    for(i=0;i<10;i++)
+    {
+        if (saldo[i]>saldo_medio)
+        {
+            printf("Conta: %d, Saldo: %f. seu saldo é maior que o saldo médio dos clientes do banco!\n", numero_conta[i], saldo[i]);
+        }
+        else if (saldo[i]<saldo_medio)
+        {
+            printf("Conta: %d, Saldo: %f. O seu saldo é menor que o saldo médio dos clientes do banco!\n", numero_conta[i], saldo[i]);
+        }
+        else
+        {
+            printf("Conta: %d, Saldo: %f. O seu saldo é igual ao saldo médio dos clientes do banco!\n", numero_conta[i], saldo[i]);
+        }
+    }
+   
+
+    return 0;
+}
