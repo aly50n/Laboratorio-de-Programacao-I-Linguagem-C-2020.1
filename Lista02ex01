@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int vetor[] = {2,2,3,5,8,10,7,7,9,10}, valorX,cont_menor=0,cont_maior=0,cont_igual=0,i;
+    printf("Digite um número inteiro para descobrir quantas vezes ele aparece no Vetor e outras informações: ");
+    scanf("%d", &valorX);
+    for(i=0; i<10; i++)
+    {
+        if(valorX == vetor[i])
+        {
+            cont_igual++;
+        }
+        else if(valorX > vetor[i])
+        {
+            cont_maior++;
+        }
+        else
+        {
+            cont_menor++;
+        }
+    }
+    printf("Há %d números iguais ao seu, há %d números maiores que o seu e há %d números menores que o seu.", cont_igual,cont_menor, cont_maior);
+    
+    return 0;
+}
